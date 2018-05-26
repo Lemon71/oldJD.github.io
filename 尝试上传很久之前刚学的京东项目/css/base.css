@@ -1,0 +1,491 @@
+@charset "UTF-8";
+/*css 初始化 */
+/*这个初始化是老师已经弄好一个txt我复制的，老师的txt估计也是jd官网复制的，不同官网初始化的要求不同，不过其实都大同小异*/
+
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset, img, input, button { 			/*fieldset组合表单中的相关元素*/
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+ul, ol {
+    list-style: none;				/*清除列表风格*/
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "SimSun", "宋体";
+}
+
+select, input {
+    vertical-align: middle;
+}
+
+select, input, textarea {
+    font-size: 12px;
+    margin: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+/*防止多行文本框拖动*/
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+/*  去掉图片低测默认的3像素空白缝隙*/
+table {
+    border-collapse: collapse;			/*合并外边线*/
+}
+
+
+body {
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53";	/*宋体，Unicode，统一码*/
+    color: #666;
+    background: #fff
+}
+
+/*.clearfix:before, .clearfix:after {*/
+    /*content: "";*/
+    /*display: table*/
+/*}*/
+
+/*.clearfix:after {*/
+    /*clear: both;*/
+/*}*/
+
+/*.clearfix {*/
+    /**zoom: 1; /!*IE/7/6*!/*/
+/*}*/
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #C81623;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+s, i, em {
+    font-style: normal;
+    text-decoration: none;
+}
+
+.col-red {
+    color: #C81623 !important;
+}
+
+/*公共类*/
+.w {
+    /*版心 提取 */
+    width: 1210px;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.al {
+    text-align: left
+}
+
+.ac {
+    text-align: center
+}
+
+.ar {
+    text-align: right
+}
+
+.hide {
+    display: none
+}
+.clearfix:after{
+    content: '.';
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    display: block;
+    clear: both;
+}
+.clearfix{
+    zoom: 1;
+}
+/*把拷贝的注释了，自己背了一个，发现主要是html那里不能写after，这里可以不写zoom也行，是为了兼容而已*/
+/*背法是两个0（其中一个是.）两个hidden 两个b（block,both）*/
+/*原来拷贝那种也是一个办法,但是不太看得懂而已*/
+/*其实这个做法原理好像也有点忘了,好像是塞点内容然后高度为0,塞的内容又隐藏就是了*/
+
+    /*site-nav部分start*/
+    .site-nav {
+        background-color: #F1F1F1;
+        height: 30px;
+    }
+    .site-nav-send,.site-nav .fore {
+        /*这里加多一个fore，提高代码复用性*/
+        line-height: 30px;
+        padding: 0px 25px 0px 10px;
+        position: relative;
+    }
+    .site-nav-send:hover {
+        background-color: #fff;
+    }
+    .site-nav-send i,.fore i {
+        position: absolute;
+        top: 12px;
+        /*然后我这里挺灵性的，因为一开始写得是left，想重复用就不适用，改成right就对了*/
+        right: 6px;
+        height: 10px;
+        width: 15px;
+        overflow: hidden;
+        /*哇这个居然写了挺久的，其实熟悉了之后以后应该会快了，就是标签套标签，然后子标签比较大，超出的部分hidden*/
+    }
+    .site-nav-send i s,.fore i s {
+        position: absolute;
+        height: 30px;
+        top: -14px;
+    }
+    .site-nav li {
+        float: left;
+        padding: 0 10px;
+        line-height: 30px;
+    }
+    .site-nav li:hover{
+        background-color: #fff;
+    }
+    li.line {
+        /*li后面有没有空格区别很大啊，之前我老是加了空格，就会变成子类，但是其实不是包含关系*/
+        width: 1px;
+        height: 12px;
+        background-color: #DDD;
+        padding: 0px;
+        margin-top: 9px;
+    }
+    .site-nav .jd-tel{
+        padding-left: 20px;
+    }
+    .site-nav .jd-tel span{
+
+        width: 15px;
+        height: 20px;
+        position: absolute;
+        top: 5px;
+        left: 0px;
+        /*欸这个没有加双引号居然成了，下次还是加双引号把*/
+        background: url(../images/tel.png) no-repeat
+    }
+    /*想让他指过去之后变颜色不知道为什么实现不了，难道是因为span不能hover?但是之前li也能啊*/
+    /*.site-nav .jd-tel span :hover{*/
+    /*/!*background: url(../images/tel.png) no-repeat 15px 20px;*!/*/
+    /*background-position: 0 210px;*/
+    /*}*/
+
+    /*site-nav部分end*/
+
+    /*topbanner部分start*/
+    .top-banner{
+        background-color: #FD6500;
+    }
+    /*topbanner部分end*/
+
+    /*search部分start*/
+    .search{
+        /*height: 500px;*/
+        /*其实上面这个高度没必要给，但是不清除浮动又不设置高度的话就会让下面的内容跟这个内容重合*/
+    }
+    .search-logo{
+        width: 362px;
+        height: 100px;
+    }
+    .search-logo a{
+        width: 270px;
+        height: 60px;
+        display: block;
+        text-indent: -9999em;
+        background:url(../images/logo.png);
+        margin-top: 20px;
+    }
+    .search-input{
+    width: 537px;
+    height: 36px;
+    /*background-color: blue;*/
+    /*其实老师不建议我们使用margin,也不建议用定位（不是情非得已就不要用定位），*/
+    /*最好还是用padding，但是用padding的话比较麻烦，就要改盒子长度*/
+    margin-top: 25px;
+    }
+.search-input input[type="text"]{
+    height: 32px;
+    width: 438px;
+    padding-left: 5px;
+    border:2px solid #B61D1D;
+    color: #999999;
+    }
+    .search-input input[type="button"]{
+        height: 36px;
+        width: 90px;
+        /*line-height: 36px;*/
+        background-color: #B61D1D;
+        float: right;
+        font-size: 16px;
+        color: #fff;
+        font-family:  "SimSun", "宋体";
+        cursor: pointer;
+        /*这个是让光标变成小手，而把pointer改成text的话就是文字那种光标*/
+        /*改成move的话就是那种看图片那种十字光标*/
+        /*改成default就是普通的箭头*/
+    }
+    .search-moreAlink{
+        width: 510px;
+        height: 28px;
+    }
+    .search-moreAlink li{
+        line-height: 28px;
+        float: left;
+        padding-left: 10px;
+    }
+    .search-car{
+        width: 142px;
+        height: 36px;
+        background-color: #F9F9F9;
+        margin:25px 65px 0 0;
+        position: relative;
+    }
+    .search-car .icon1 {
+        position: absolute;
+        width: 18px;
+        height: 16px;
+        top: 8px;
+        left: 0px;
+        background:  url("../images/tel.png") no-repeat 0 -57px;
+    }
+    .search-car a{
+        line-height: 36px;
+        padding-left: 30px;
+    }
+    .search-car .icon2 {
+        position: absolute;
+        top: 10px;
+        left: 108px;
+        font-family: "SimSun";
+    }
+    .search-car .icon3 {
+        position: absolute;
+        background-color: red;
+        width: 16px;
+        height: 14px;
+        top: -8px;
+        border-radius: 8px 8px 8px 0;
+        line-height: 14px;
+        text-indent: 4px;
+        color: #fff;
+        /*上面这个是新学的半圆图形的画法，左上角开始*/
+    }
+    /*search部分end*/
+
+    /*shortcut-nav部分start*/
+    .shortcut-nav{
+        border-bottom: 2px solid #B1191A;
+        height: 44px;
+        width: 100%;
+    }
+    .shortcut-nav .shortcut-nav-menu{
+        height: 44px;
+        background-color: #B1191A;
+        width: 196px;
+        float: left;
+        line-height: 44px;
+        font-size: 16px;
+        border: 2px solid #B1191A;
+
+
+
+    }
+    .shortcut-nav-menu .shortcut-nav-menu-all a{
+        color: #ffffff;
+        padding-left: 10px;
+    }
+    .shortcut-nav-menu .shortcut-nav-menu-one {
+        width: 196px;
+        height: 466px;
+        background-color: #C81623;
+        /*想要用层级原来一定要用定位*/
+        position: relative;
+        z-index: 1;
+        border: 2px solid #C81623;
+        margin-left: -2px;
+        color: #fff;
+        text-indent: 4px;
+        font-weight: 400;
+    }
+    .shortcut-nav-menu-one div{
+        height: 31px;
+    }
+    .shortcut-nav-menu-one div:hover  {
+        background-color: #fff;
+    }
+    .shortcut-nav-menu-one div:hover a {
+        color: red;
+    }
+    .shortcut-nav-menu-one div:hover i {
+        color: red;
+    }
+    .shortcut-nav-menu-one h3{
+        line-height: 31px;
+        float: left;
+        padding-left: 0px;
+    }
+    .shortcut-nav-menu-one a{
+        color: #fff;
+        font-size: 14px;
+        font-family: "微软雅黑";
+    }
+    .shortcut-nav-menu-one i{
+        line-height: 31px;
+        float: right;
+        padding-right: 13px;
+        font-family:"consolas";
+        font-size: 9px;
+    }
+    .shortcut-nav .shortcut-nav-item{
+        height: 44px;
+        /*background-color: blue;*/
+        float: left;
+        width: 760px;
+        line-height: 44px;
+        font-size: 16px;
+        font-family: "微软雅黑";
+    }
+    .shortcut-nav .shortcut-nav-item li{
+
+        float: left;
+    }
+    .shortcut-nav .shortcut-nav-item li a{
+        padding:0 19.5px;
+
+
+    }
+    .shortcut-nav .shortcut-nav-img{
+        float: right;
+        height: 44px;
+        margin-top: -10px;
+        margin-right: 40px;
+    }
+    /*shortcut-nav部分end*/
+
+    /*search部分start*/
+    /*search部分end*/
+
+    /*search部分start*/
+    /*search部分end*/
+
+    /*search部分start*/
+    /*search部分end*/
+
+    /*footer部分start*/
+    .footer-top-slogen {
+        position: relative;
+        width: 100%;
+        height: 94px;
+        background-color: #F5F5F5;
+        margin-bottom: 14px;
+        /*上面这个用于证明要清除浮动，不然盒子会去了search那里*/
+    }
+    .footer-top-slogen .footer-top-slogen-icon{
+        position: absolute;
+        left: 50%;
+        /*这个百分之五十是精髓所在,就是跟上面那个100%一样精髓,就是当窗口变小之后依然在中间,*/
+        /*如果是继承了版心就不能实现了*/
+        /*但是其实我个人觉得是没什么必要没必要窗口变小依然在中间啊*/
+        margin-top: 20px;
+
+    }
+     .footer-top-slogen-icon1{
+        margin-left: -604px;
+    }
+    .footer-top-slogen-icon2{
+        margin-left: -302px;
+    }
+    .footer-top-slogen-icon3{
+        
+    }
+    .footer-top-slogen-icon4{
+        margin-left: 302px;
+    }
+    .footer-top-shopping dl{
+        float: left;
+        width: 200px;
+    }
+    .footer-top-shopping dt{
+        margin: 10px 0px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .footer-top-shopping dd{
+        margin: 4px 0;
+    }
+    .footer-top-shopping .footer-top-shopping-last-dl{
+        width: 100px;
+    }
+    .footer-top-shopping .footer-top-shopping-map-dd{
+        margin-top: 22px;
+        margin-bottom: 0px;
+    }
+    .footer-top-shopping .footer-top-shopping-map-a{
+        font-size: 12px;
+        line-height: 24px;
+        margin-left: 132px;
+        font-family: "simsun";
+    }
+    .footer-top-shopping .footer-top-shopping-map-dl{
+        background: url(../images/china.png) no-repeat 0 -130px;
+        width: 201px;
+        height: 164px;
+        padding-left: 18px;
+    }
+    .footer-top-shopping .footer-top-shopping-map-dl{
+        
+    }
+    .footer-bottom{
+        border-top: 1px #E5E5E5 solid;
+        margin-top: 30px;
+    }
+    .footer-bottom-links {
+        text-align: center;
+        background-color: #fff;
+        margin-top: 25px;
+        margin-bottom: 12px;
+    }
+    .footer-bottom-links a{
+        margin: 0px 12px;
+    
+    }
+    .footer-bottom-copyright {
+        text-align: center;
+    }
+    .footer-bottom-img{
+        text-align: center;
+
+    }
+    /*footer部分end*/

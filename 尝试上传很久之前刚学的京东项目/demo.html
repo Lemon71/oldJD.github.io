@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>测试a标签能不能用padding</title>
+    <style type="text/css">
+        a{
+            background-color: red;
+            padding-right: 200px; ;
+            /*完全OJBK，完全可以，即使不浮动，不转行内块元素也没问题*/
+        }
+        div{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+<a href="">asd</a>
+<div>123</div>
+</body>
+</html>

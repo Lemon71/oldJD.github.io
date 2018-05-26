@@ -1,0 +1,239 @@
+@charset "UTF-8";
+/*sub-banner部分start*/
+.sub-banner{
+    position: relative;
+    z-index: -1;
+}
+.sub-banner a {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: url("../images/002.jpg") no-repeat center;
+    height: 1250px;
+}
+/*sub-banner部分end*/
+/*main部分start*/
+    .main-slider{
+        width: 730px;
+        height: 454px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 12px;
+        float: left;
+        position: relative;
+    }
+    .main-slider ul{
+        position: absolute;
+        bottom:10px;
+        left: 50%;
+        margin-left:-66px;
+    }
+    .main-slider li{
+        float: left;
+        background-color: #3E3E3E;
+        margin:0 2px;
+        line-height: 18px;
+        width: 18px;
+        height: 18px;
+        text-align: center;
+        border-radius: 50%;
+        color: #FFFFFF;
+        font-size: 9px;
+        cursor: pointer;
+    }
+    .main-slider .current{
+        background-color: #B61B1F;
+    }
+    /*为了代码重复使用，我把arrow的前面那些父盒子不写，这样子后面也能用这个arrow了*/
+     .arrow a{
+        position: absolute;
+        top: 50%;
+        background-color: black;
+        font-family: "consolas";
+        height: 62px;
+        width: 28px;
+        margin-top: -31px;
+        text-align: center;
+        line-height: 62px;
+        /*同时这里有个扩展，如果总的这里写了left0的话，下面那个靠右的无论权限如何都无法让他靠右
+        因为因为左的权限就是大于右*/
+        /*另外一个扩展如下，就是透明度opacity,这个虽然很方便，但是透明度是连着里面的文字一起透明的*/
+        /*还是建议另一个rgba，就只改变背景*/
+        /*opacity: 0.3;*/
+        background: rgba(0,0,0,0.2);
+        color: #FFFFFF;
+    }
+    .arrow .arrow-left{
+        /*float: left;*/
+        /*有点蠢，上面是用定位下面怎么就用了浮动呢*/
+        left: 0;
+    }
+     .arrow .arrow-right{
+        /*float: right;*/
+        /*有点蠢，上面是用定位下面怎么就用了浮动呢*/
+        right: 0px;
+    }
+    .main-news{
+        float: left;
+        margin-top: 12px;
+
+    }
+    .main-news .main-news-top{
+        border: #E4E4E4 solid 1px;
+        height: 372px;
+        width: 250px;
+        margin-bottom: 6px;
+    }
+    .main-news .main-news-top .main-news-top-faster{
+        height: 32px;
+        border-bottom: dotted 1px #E4E4E4 ;
+    }
+    .main-news .main-news-top .main-news-top-faster .main-news-top-faster-title span{
+        float: left;
+        width: 100px;
+        height: 32px;
+        line-height: 32px;
+        color: #666666;
+        padding-left: 14px;
+    }
+    .main-news .main-news-top .main-news-top-faster .main-news-top-faster-title a{
+        float: right;
+        height: 32px;
+        line-height: 32px;
+        color: #666666                                                                                                                                                ;
+        padding-right:15px;
+
+    }
+    .main-news .main-news-top .main-news-top-faster .main-news-top-faster-content {
+        float: left;
+        margin-top:20px;
+        font-size: 14px;
+        border-bottom: dashed 1px #E4E4E4 ;
+        height: 115px;
+    }
+    .main-news .main-news-top .main-news-top-faster .main-news-top-faster-content li{
+        line-height: 14px;
+        margin-bottom: 9px;
+    }
+    .main-news .main-news-top .main-news-top-faster .main-news-top-faster-content span{
+        padding-left: 14px;
+
+    }
+    .main-news-top-money{
+        height: 208px;
+        width: 250px;
+        /*因为我想用overflow的话，不定义宽高的话就会全都hidden了*/
+        /*但是其实只定义了宽度也没有被隐藏，难道高度会被子盒子撑开，宽度不会？*/
+        overflow: hidden;
+        /*而且这里必须要用overflow才能达到我的目的，因为我右边会挤出来*/
+    }
+    .main-news-top-money ul{
+        width: 300px;
+    }
+    .main-news-top-money li{
+        border: 1px solid #E4E4E4;
+        float: left;
+        height: 70px;
+        width: 62px;
+        border-top:0px;
+        position: relative;
+    }
+    .main-news-top-money a{
+        height: 70px;
+        width: 62px;
+        float: left;
+    }
+    .main-news-top-money i{
+        display: block;
+        width: 25px;
+        height: 27px;
+        background: url("../images/money0.png") no-repeat -18px -12px ;
+        position: absolute;
+        top: 10px;
+        left: 18px;
+    }
+    .main-news-top-money span{
+        position: absolute;
+        height: 28px;
+        bottom: 0px;
+        width: 62px;
+        text-align: center;
+    }
+    .main-news-top-money .money2{
+        background-position: -80px -12px ;
+    }
+    .main-news-top-money .money3{
+        background-position: -144px -12px;
+    }
+    .main-news-top-money .money4{
+        background-position:  -207px -12px;
+    }
+    .main-news-top-money .money5{
+        background-position: -18px -82px;
+    }
+    .main-news-top-money .money6{
+        background-position: -80px -82px;
+    }
+    .main-news-top-money .money7{
+        background-position: -144px  -82px;
+    }
+    .main-news-top-money .money8{
+        background-position: -207px -82px;
+    }
+    .main-news-top-money .money9{
+        background-position: -18px -154px;
+    }
+    .main-news-top-money .money10{
+        background-position: -80px -154px;
+    }
+    .main-news-top-money .money11{
+        background-position: -144px -154px;
+    }
+    .main-news-top-money .money12{
+        background-position: -207px -154px;
+    }
+    .main-news-top-money s{
+        height: 15px;
+        width: 12px;
+        position: absolute;
+        top: 0px;
+        left: 45px;
+        background: url("../images/money0.png") no-repeat -236px -140px ;
+    }
+    /*.main-news-top-money span{}*/
+/*main部分end*/
+
+
+    /*today部分start*/
+    .today-left{
+        float: left;
+        width: 209px;
+        height: 151px;
+        padding-top: 40px;
+    }
+    .today-left a{
+        background: url("../images/today.png") no-repeat;
+        display: block;
+        width: 209px;
+        height: 151px;
+    }
+    .today-right{
+        float: right;
+        padding-top: 10px;
+        position: relative;
+        /*overflow: hidden;*/
+
+    }
+    .today-right ul{
+        /*width:410%;*/
+
+    }
+    .today-right li{
+        float: right;
+        margin-right:1px;
+    }
+    /*我发现了老师的盲点bug,这里的如果margin写大一点会很明显，右边其实会多出来，对不齐的*/
+    /*其实我觉得吧，是强行复用的锅，因为其实重新写应该不会有事情，因为你装在right和ul和li里其实都不太合适*/
+    /*最好还是再写一个盒子来装*/
+    /*today部分end*/
